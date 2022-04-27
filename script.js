@@ -1,10 +1,11 @@
 console.log("Lets do this")
-var totalPokemon = 10
+var totalPokemon = 1100
 //create sidebar
 $.get('https://pokeapi.co/api/v2/', (data) => {
   $('#sidebar').append('<ul></ul>')
   Object.keys(data).forEach((key) => {
-    $('#sidebar > ul').append(`<li>${key}</li>`)
+    let dropdown = $(`<details>${key}</details>`)
+    $('#sidebar').append(dropdown)
   })
 })
 
