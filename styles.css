@@ -1,5 +1,15 @@
+@font-face {
+  font-family: customFont;
+  src: url(font.ttf);
+}
 html, body {
-  background-color: #5d7b9d
+  background-color: #5d7b9d;
+  font-family: Helvetica, sans-serif;
+}
+h1 {
+  font-family: customFont;
+  font-size: 3em;
+  margin: 10px;
 }
 .bin {
   margin: 1em;
@@ -10,11 +20,42 @@ html, body {
   background-color: white;
 }
 #sidebar {
+  box-shadow: 0px 10px 20px #333;
+  border-radius: 10px;
   background-color: white;
 }
-#content {
+#sidebar > details {
+  padding-left: 1em;
+}
+#container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+#content {
+  flex-grow: 1;
+}
+a {
+  text-decoration: underline;
+  font-style: italic;
+  color: peachpuff
+}
+li {
+  margin-left: 1em;
+}
+details > li {
+  margin-left: 2em;
+}
+details > details > li {
+  margin-left: 3em;
+}
+details > details > details > li {
+  margin-left: 4em;
+}
+details > details {
+  margin-left: 1em;
+}
+details > details > details {
+  margin-left: 2em;
 }
